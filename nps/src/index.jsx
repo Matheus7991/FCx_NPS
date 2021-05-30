@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import PagForm from './Pages/PagForm';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PagForm />
   </React.StrictMode>,
   document.getElementById('root')
 );
