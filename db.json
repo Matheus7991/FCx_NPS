@@ -1,0 +1,34 @@
+{
+  "cliente": [
+    {
+      "Nota_NPS": "9",
+      "Classificacao": "Promotor",
+      "Pergunta_1": "Curtir",
+      "Pergunta_2": "Curtir",
+      "Pergunta_3": "Curtir",
+      "Pergunta_4": "Curtir",
+      "Pergunta_5": "Curtir",
+      "id": 1
+    },
+    {
+      "Nota_NPS": "5",
+      "Classificacao": "Detrator",
+      "Pergunta_1": "Curtir",
+      "Pergunta_2": "Não Curtir",
+      "Pergunta_3": "Curtir",
+      "Pergunta_4": "Não Curtir",
+      "Pergunta_5": "Não Curtir",
+      "id": 2
+    },
+    {
+      "Nota_NPS": "4",
+      "Classificacao": "Detrator",
+      "Pergunta_1": "Curtir",
+      "Pergunta_2": "Curtir",
+      "Pergunta_3": "Curtir",
+      "Pergunta_4": "Não Curtir",
+      "Pergunta_5": "Não Curtir",
+      "id": 3
+    }
+  ]
+}

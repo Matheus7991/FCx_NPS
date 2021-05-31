@@ -1,19 +1,13 @@
-import React from "react";
-import { Card, Container } from "react-bootstrap";
+ import React from 'react';
+import { Card } from 'react-bootstrap';
 
-import Form from '../Form';
+const Caixa = ({ title, className, children }) => (
+  <Card className={`mb-4 ${className}`}>
+    <Card.Header>
+      <Card.Title>{title}</Card.Title>
+    </Card.Header>
+    <Card.Body>{children}</Card.Body>
+  </Card>
+);
 
-const index = () => {
-  return (
-    <Container>
-        <Card>
-            <Card.Header as="h5">Olá, tudo bem?! Nos ajude a melhorar</Card.Header>
-            <Card.Body>
-                <Form />
-            </Card.Body>
-        </Card>
-    </Container>
-  );
-};
-
-export default index;
+export default Caixa;
