@@ -30,6 +30,15 @@ const PagForm = () => {
   const onSubmit = async () => {
     alert('Obrigado!!!!!!')
 
+    let nota = Number(form.Nota_NPS);
+    if (nota <= 6){
+      form.Classificacao = "Detrator";
+    } else if (nota>6 && nota < 9){
+      form.Classificacao = "Neutro";
+    } else {
+      form.Classificacao = "Promotor";
+    }
+
     await api.post('/cliente', form); 
   };
 
@@ -45,6 +54,7 @@ const PagForm = () => {
                   ou colega?
                 </Form.Label>
                 <br />
+                <Form.Check inline value={0} label="0" name="Nota_NPS" type={type} onChange={onChange}/>
                 <Form.Check inline value={1} label="1" name="Nota_NPS" type={type} onChange={onChange}/>
                 <Form.Check inline value={2} label="2" name="Nota_NPS" type={type} onChange={onChange}/>
                 <Form.Check inline value={3} label="3" name="Nota_NPS" type={type} onChange={onChange}/>
