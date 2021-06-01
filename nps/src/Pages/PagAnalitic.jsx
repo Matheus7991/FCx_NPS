@@ -13,19 +13,19 @@ const PagAnalitic = () => {
     id: 'Classificacao',
     value: 'Classificação'
   },{
-    id: 'Pergunta_1',
+    id: 'pergunta_1',
     value: 'Pergunta 1'
   },{
-    id: 'Pergunta_2',
+    id: 'pergunta_2',
     value: 'Pergunta 2'
   },{
-    id: 'Pergunta_3',
+    id: 'pergunta_3',
     value: 'Pergunta 3'
   },{
-    id: 'Pergunta_4',
+    id: 'pergunta_4',
     value: 'Pergunta 4'
   },{
-    id: 'Pergunta_5',
+    id: 'pergunta_5',
     value: 'Pergunta 5'
   }];
 

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Form, Container, Button } from "react-bootstrap";
+import { toast } from 'react-toastify';
+import api from '../Utils/api'
 
 import Card from "../Components/Card";
 
 const PagForm = () => {
 
   const [form, setForm] = useState({
-    notaNPS: '',
-    classificacao: '',
+    Nota_NPS: '',
+    Classificacao: '',
     pergunta_1: '',
     pergunta_2: '',
     pergunta_3: '',
@@ -25,10 +27,16 @@ const PagForm = () => {
     })
   };
 
+  const onSubmit = async () => {
+    alert('Obrigado!!!!!!')
+
+    await api.post('/cliente', form); 
+  };
+
   return (
     <Container className="mt-5">
       <Card title="Olá, tudo bem?! Nos ajude a melhorar">
-        <Form>
+        <Form onSubmit={onSubmit}>
           <Form.Group>
             {["radio"].map((type) => (
               <div key={`inline-${type}`} className="mb-3">
@@ -37,16 +45,16 @@ const PagForm = () => {
                   ou colega?
                 </Form.Label>
                 <br />
-                <Form.Check inline value={form.notaNPS} label="1" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="2" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="3" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="4" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="5" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="6" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="7" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="8" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="9" name="group1" type={type} onChange={onChange}/>
-                <Form.Check inline value={form.notaNPS} label="10" name="group1" type={type} onChange={onChange}/>
+                <Form.Check inline value={1} label="1" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={2} label="2" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={3} label="3" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={4} label="4" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={5} label="5" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={6} label="6" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={7} label="7" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={8} label="8" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={9} label="9" name="Nota_NPS" type={type} onChange={onChange}/>
+                <Form.Check inline value={10} label="10" name="Nota_NPS" type={type} onChange={onChange}/>
               </div>
             ))}
           </Form.Group>
@@ -59,6 +67,7 @@ const PagForm = () => {
               label="Curtir"
               type="radio"
               name="pergunta_1"
+              value={"Curtir"}
               onChange={onChange}
             />
             <Form.Check
@@ -66,6 +75,7 @@ const PagForm = () => {
               label="Não Curtir"
               type="radio"
               name="pergunta_1"
+              value={"Não Curtir"}
               onChange={onChange}
             />
           </Form.Group>
@@ -80,6 +90,7 @@ const PagForm = () => {
               label="Curtir"
               type="radio"
               name="pergunta_2"
+              value={"Curtir"}
               onChange={onChange}
             />
             <Form.Check
@@ -87,6 +98,7 @@ const PagForm = () => {
               label="Não Curtir"
               type="radio"
               name="pergunta_2"
+              value={"Não Curtir"}
               onChange={onChange}
             />
           </Form.Group>
@@ -101,6 +113,7 @@ const PagForm = () => {
               label="Curtir"
               type="radio"
               name="pergunta_3"
+              value={"Curtir"}
               onChange={onChange}
             />
             <Form.Check
@@ -108,6 +121,7 @@ const PagForm = () => {
               label="Não Curtir"
               type="radio"
               name="pergunta_3"
+              value={"Não Curtir"}
               onChange={onChange}
             />
           </Form.Group>
@@ -122,6 +136,7 @@ const PagForm = () => {
               label="Curtir"
               type="radio"
               name="pergunta_4"
+              value={"Curtir"}
               onChange={onChange}
             />
             <Form.Check
@@ -129,6 +144,7 @@ const PagForm = () => {
               label="Não Curtir"
               type="radio"
               name="pergunta_4"
+              value={"Não Curtir"}
               onChange={onChange}
             />
           </Form.Group>
@@ -143,6 +159,7 @@ const PagForm = () => {
               label="Curtir"
               type="radio"
               name="pergunta_5"
+              value={"Curtir"}
               onChange={onChange}
             />
             <Form.Check
@@ -150,6 +167,7 @@ const PagForm = () => {
               label="Não Curtir"
               type="radio"
               name="pergunta_5"
+              value={"Não Curtir"}
               onChange={onChange}
             />
           </Form.Group>

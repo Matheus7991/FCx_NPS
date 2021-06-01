@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PagForm from './Pages/PagForm';
-//import PagAnalitic from './Pages/PagAnalitic'
+import Routes from './routes'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <PagForm />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
